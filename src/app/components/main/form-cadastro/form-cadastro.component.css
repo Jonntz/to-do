@@ -1,0 +1,66 @@
+form {
+  width: 50vw;
+  margin: 90px auto;
+  background-color: white;
+  padding: 25px;
+  border: thin solid silver;
+  border-radius: 8px;
+}
+
+form input {
+  width: 100%;
+  margin: 3px 0 20px 0;
+  padding: 8px;
+  font-size: 16px;
+}
+
+form label {
+  font-weight: 600;
+}
+
+form select {
+  width: 100%;
+  background-color: white;
+  margin: 3px 0 20px 0;
+  padding: 8px;
+  font-size: 16px;
+  border: thin solid silver;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat white;
+  background-position: right;
+  background-size: contain;
+
+}
+
+form .btn-cadastrar {
+  font-weight: bold;
+  color: white;
+  background-color: #1E90FF;
+  font-size: 17px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+form .btn-cadastrar:hover {
+  box-shadow: 1px 1px 2px silver;
+}
+
+form .btn-voltar {
+  font-weight: bold;
+  color: white;
+  background-color: red;
+  font-size: 17px;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+form .btn-voltar:hover {
+  box-shadow: 1px 1px 2px silver;
+}

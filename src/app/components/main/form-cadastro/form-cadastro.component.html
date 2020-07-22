@@ -1,0 +1,38 @@
+<form>
+  <h2>Cadastre-se em nosso sistema.</h2><br>
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+  </div>
+
+  <div class="form-group">
+    <label for="nascimento">Data de nascimento:</label>
+    <input type="date" name="nascimento" id="nascimento" placeholder="Digite sua data de Nascimento">
+  </div>
+
+  <div class="form-group">
+    <label for="sexo">Sexo:</label>
+    <select name="Sexo" id="sexo">
+      <option value="masculino">M</option>
+      <option value="feminino">F</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+  </div>
+
+  <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+  </div>
+
+  <div class="form-group">
+    <label for="confirmar">Confirmar senha:</label>
+    <input type="password" name="confirmar" id="confirmar" placeholder="Confirme sua senha">
+  </div>
+
+  <button name="cadastrar" id="btn-cadastrar" class="btn-cadastrar">Cadastrar</button>
+  <button name="voltar" id="btn-voltar" class="btn-voltar" (click)="voltar()">Voltar</button>
+</form>

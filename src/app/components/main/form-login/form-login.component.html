@@ -1,0 +1,14 @@
+<form>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" placeholder="E-mail">
+  </div>
+
+  <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input type="password" name="senha" id="senha" placeholder="Senha">
+  </div>
+  <button name="logar" id="btn-logar" class="btn-logar" (click)="logar()">Entrar</button>
+
+  <p>Ainda não é cadastrado? <a (click)="cadastro()">Registre-se</a></p>
+</form>
