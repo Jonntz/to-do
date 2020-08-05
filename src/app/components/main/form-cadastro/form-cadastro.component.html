@@ -1,18 +1,19 @@
-<form>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
   <h2>Cadastre-se em nosso sistema.</h2><br>
   <div class="form-group">
     <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome">
+    <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" [(ngModel)]="account.username" required>
   </div>
 
   <div class="form-group">
     <label for="nascimento">Data de nascimento:</label>
-    <input type="date" name="nascimento" id="nascimento" placeholder="Digite sua data de Nascimento">
+    <input type="date" name="nascimento" id="nascimento" placeholder="Digite sua data de Nascimento"
+      [(ngModel)]="account.nascimento" required>
   </div>
 
   <div class="form-group">
     <label for="sexo">Sexo:</label>
-    <select name="Sexo" id="sexo">
+    <select name="Sexo" id="sexo" [(ngModel)]="account.sexo" required>
       <option value="masculino">M</option>
       <option value="feminino">F</option>
     </select>
@@ -20,19 +21,21 @@
 
   <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="Digite seu E-mail">
+    <input type="email" name="email" id="email" placeholder="Digite seu E-mail" [(ngModel)]="account.email" required>
   </div>
 
   <div class="form-group">
     <label for="senha">Senha:</label>
-    <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" [(ngModel)]="account.password"
+      required>
   </div>
 
   <div class="form-group">
     <label for="confirmar">Confirmar senha:</label>
-    <input type="password" name="confirmar" id="confirmar" placeholder="Confirme sua senha">
+    <input type="password" name="confirmar" id="confirmar" placeholder="Confirme sua senha"
+      [(ngModel)]="account.confirmar" required>
   </div>
 
-  <button name="cadastrar" id="btn-cadastrar" class="btn-cadastrar">Cadastrar</button>
+  <button type="submit" name="cadastrar" id="btn-cadastrar" class="btn-cadastrar">Cadastrar</button>
   <button name="voltar" id="btn-voltar" class="btn-voltar" (click)="voltar()">Voltar</button>
 </form>

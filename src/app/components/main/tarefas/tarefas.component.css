@@ -26,8 +26,25 @@
   border-radius: 8px;
   cursor: pointer;
   margin-top: 5px;
+  float: right;
 }
 
 .content .btn-sair:hover {
+  box-shadow: 1px 1px 2px silver;
+}
+
+.content .btn-adicionar {
+  font-weight: bold;
+  color: white;
+  background-color: #32CD32;
+  font-size: 17px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.content .btn-adicionar:hover {
   box-shadow: 1px 1px 2px silver;
 }

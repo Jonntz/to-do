@@ -1,14 +1,14 @@
-<form>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
   <div class="form-group">
     <label for="email">Email:</label>
-    <input type="email" name="email" id="email" placeholder="E-mail">
+    <input type="email" name="email" id="email" placeholder="E-mail" [(ngModel)]="login.email" required>
   </div>
 
   <div class="form-group">
     <label for="senha">Senha:</label>
-    <input type="password" name="senha" id="senha" placeholder="Senha">
+    <input type="password" name="senha" id="senha" placeholder="Senha" [(ngModel)]="login.password" required>
   </div>
-  <button name="logar" id="btn-logar" class="btn-logar" (click)="logar()">Entrar</button>
+  <button type="submit" name="logar" id="btn-logar" class="btn-logar">Entrar</button>
 
   <p>Ainda não é cadastrado? <a (click)="cadastro()">Registre-se</a></p>
 </form>
