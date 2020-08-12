@@ -1,3 +1,4 @@
+import { AccountModel } from './../account.model';
 import { environment } from './../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -64,5 +65,16 @@ export class AccountService {
       return false;
     }
     return true;
+  }
+
+  async getUsers(account: any){
+    const result = await this.http.get<any>(`${environment.api}/users`, account.username).toPromise();
+    return result;
+  }
+
+  async deslogar(user: any){
+      window.localStorage.removeItem('token');
+      return false;
+   
   }
 }

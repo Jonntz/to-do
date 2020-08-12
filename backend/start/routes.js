@@ -20,3 +20,6 @@ Route.post('/register', 'AuthController.register');
 Route.post('/login', 'AuthController.authenticate');
 
 Route.get('/tarefas', 'TarefaController.index').middleware(["auth"]);
+
+Route.get('users', 'UserController.index').middleware(["auth"]);
+Route.get('users/:id', 'UserController.show').middleware(["auth"]);

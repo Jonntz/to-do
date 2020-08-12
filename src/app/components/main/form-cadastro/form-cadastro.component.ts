@@ -31,8 +31,8 @@ export class FormCadastroComponent implements OnInit {
       // alert("Entrando na contra...");
       console.log(result);
       alert("Conta criada com sucesso");
-
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login'])
+      return result
 
     } catch (error) {
       // alert("usuário não cadastrado")
