@@ -9,10 +9,14 @@ class UserController {
     }
 
     async show ({ params }) {
-        const user = await User.findOrFail(params.id);
-        const data = await user.load(user);
-      
-        return data;
+        try {
+            const user = await User.findOrFail(params.id)
+            return user;
+
+        } catch (error) {
+            console.log("erro", error);
+        }
+
     }
 }
 

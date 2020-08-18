@@ -1,3 +1,4 @@
+import { Account } from './components/main/account.model';
 import { HttpInterceptorProviders } from './http-interceptors/index';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -28,7 +29,8 @@ import { AuthenticationComponent } from './authentication/authentication.compone
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpInterceptorProviders],
+  providers: [HttpInterceptorProviders,
+    Account],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

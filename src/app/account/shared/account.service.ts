@@ -1,8 +1,8 @@
-import { AccountModel } from './../account.model';
 import { environment } from './../../../environments/environment';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpRequest } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import * as jwt_decode from 'jwt-decode';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -68,7 +68,12 @@ export class AccountService {
   }
 
   async getUsers(account: any){
-    const result = await this.http.get<any>(`${environment.api}/users`, account.username).toPromise();
+    const result = await this.http.get<any>(`${environment.api}/users/`, account).toPromise();
+    return result;
+  }
+
+  async getUsersById(account: any) :Promise<Object>{
+    const result = await this.http.get<any>(`${environment.api}/users/:${account.id}`, account).toPromise();
     return result;
   }
 

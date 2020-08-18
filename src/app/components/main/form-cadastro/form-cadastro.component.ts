@@ -1,3 +1,4 @@
+import { Account } from './../account.model';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/account/shared/account.service';
@@ -8,16 +9,9 @@ import { AccountService } from 'src/app/account/shared/account.service';
   styleUrls: ['./form-cadastro.component.css']
 })
 export class FormCadastroComponent implements OnInit {
-  account = {
-    username: '',
-    sexo: '',
-    nascimento: '',
-    email: '',
-    password: '',
-    confirmar: '',
-  }
+  account = this.conta;
 
-  constructor(private router: Router, private accountService: AccountService) { }
+  constructor(private router: Router, private accountService: AccountService, private conta: Account) { }
 
   voltar() {
     this.router.navigate(['']);

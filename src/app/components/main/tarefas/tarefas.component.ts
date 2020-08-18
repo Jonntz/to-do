@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountService } from 'src/app/account/shared/account.service';
+import { Account } from '../account.model';
+
 
 
 @Component({
@@ -11,10 +13,16 @@ import { AccountService } from 'src/app/account/shared/account.service';
 export class TarefasComponent implements OnInit {
 
   data = {
-    username: ''
-  }
+    id: this.conta.id,
+    username: this.conta.username,
+    sexo: this.conta.sexo,
+    nascimento: this.conta.nascimento,
+    email: this.conta.email,
+    password: this.conta.password,
+    confirmar: this.conta.confirmar
+  };
 
-  constructor(private router: Router, private account: AccountService) { }
+  constructor(private router: Router, private account: AccountService, private conta: Account) { }
 
   async sair() {
     try {
@@ -31,13 +39,18 @@ export class TarefasComponent implements OnInit {
   }
 
   async onLoad(){
+
     try {
-      const result = await this.account.getUsers(this.data);
+      const result = await this.account.getUsersById(this.data);
       const title = document.querySelector("#title");
-      // const conta = JSON.parse({result});
-      console.log(result[0].username);
-      console.log(result);
-      title.innerHTML = `Seja bem-vindo, ${result[1].username}`
+      const conta = JSON.stringify(result);
+      
+      const real = JSON.parse(conta);
+      console.log(this.data)
+
+      console.log(real);
+
+      title.innerHTML = `Seja bem-vindo, ${real}`;
       
       return true;
 
