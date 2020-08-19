@@ -11,12 +11,7 @@ import { Account } from '../account.model';
 })
 export class FormLoginComponent implements OnInit {
 
-  login = {
-    id: this.conta.id,
-    username: this.conta.username,
-    email: this.conta.email,
-    password: this.conta.password
-  };
+  login = this.conta
 
   constructor(private router: Router, private accouservice: AccountService, private conta: Account) { }
   cadastro() {

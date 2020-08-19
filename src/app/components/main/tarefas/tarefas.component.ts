@@ -41,7 +41,7 @@ export class TarefasComponent implements OnInit {
   async onLoad(){
 
     try {
-      const result = await this.account.getUsersById(this.data);
+      const result = await this.account.getUsersById(this.data.id);
       const title = document.querySelector("#title");
       const conta = JSON.stringify(result);
       
