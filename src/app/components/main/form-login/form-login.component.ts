@@ -25,7 +25,7 @@ export class FormLoginComponent implements OnInit {
       const result = await this.accouservice.login(this.login);
       console.log(this.login)
       console.log(`Login efetuado com sucesso: ${result}`);
-      alert("Entrando na conta...");
+      // alert("Entrando na conta...");
       this.router.navigate(['']);
 
     } catch (error) {

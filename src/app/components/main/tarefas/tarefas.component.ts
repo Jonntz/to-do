@@ -47,7 +47,7 @@ export class TarefasComponent implements OnInit {
       
       const real = JSON.parse(conta);
       console.log(this.data)
-
+      // console.log(result)
       console.log(real);
 
       title.innerHTML = `Seja bem-vindo, ${real}`;

@@ -73,7 +73,7 @@ export class AccountService {
   }
 
   async getUsersById(id: any){
-    const result = await this.http.get<any>(`${environment.api}/users/:${id}`, id).toPromise();
+    const result = await this.http.get<any>(`${environment.api}/users/:${id}`).toPromise();
     return result;
   }
 
